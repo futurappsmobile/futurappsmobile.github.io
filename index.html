@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapFuel - Your AI Nutritionist</title>
+  <meta name="robots" content="index, follow">
+  
+  <!-- Language detection and redirect -->
+  <script>
+    (function() {
+      // Get user's preferred language from browser
+      const userLang = navigator.language || navigator.userLanguage;
+      const langCode = userLang.split('-')[0].toLowerCase();
+      
+      // Supported languages - update this list based on your site's languages
+      const supportedLangs = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar', 'hi', 'bn', 'ur', 'fa', 'he', 'ms', 'tr', 'pl', 'cs', 'id', 'uk', 'vi', 'th', 'nl'];
+      
+      // Default to English if language not supported
+      const targetLang = supportedLangs.includes(langCode) ? langCode : 'en';
+      
+      // Redirect to the appropriate language page
+      window.location.href = '/website/' + targetLang + '/';
+    })();
+  </script>
+  
+  <!-- Fallback meta refresh for browsers with JavaScript disabled -->
+  <meta http-equiv="refresh" content="0; url=/website/en/">
+</head>
+<body>
+  <div style="text-align: center; padding: 50px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">
+    <h1>SnapFuel</h1>
+    <p>Redirecting to your language...</p>
+    <p>If you are not redirected automatically, <a href="/website/en/">click here</a>.</p>
+  </div>
+</body>
+</html>
